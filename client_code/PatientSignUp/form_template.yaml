@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {background: 'theme:primary'}
+  properties: {background: '#9DD9F3'}
 components:
 - name: psback_button
   properties: {text: Back, align: left, bold: true, font: poppins}

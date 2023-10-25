@@ -32,6 +32,11 @@ class DoctorLogin(DoctorLoginTemplate):
       print("no")
     pass
 
+  def dlback_button_click(self, **event_args):
+    open_form('Intro')
+    pass
+
+
 
 
 

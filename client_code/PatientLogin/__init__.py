@@ -35,6 +35,11 @@ class PatientLogin(PatientLoginTemplate):
       
     pass
 
+  def plback_button_click(self, **event_args):
+    open_form('Intro')
+    pass
+
+
   
 
 
