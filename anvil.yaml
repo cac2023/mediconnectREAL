@@ -1,5 +1,15 @@
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: Intro}
+package_name: MediConnect
 allow_embedding: false
-package_name: Custom_HTML_1
+name: MediConnect
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+metadata: {title: MediConnect}
+startup_form: null
 db_schema:
   doctor:
     client: none
@@ -23,12 +33,3 @@ db_schema:
       admin_ui: {width: 200, order: 1}
       type: string
     title: Patient
-startup: {type: form, module: Intro}
-name: Custom HTML 1
-startup_form: null
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
-services:
-- source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {}

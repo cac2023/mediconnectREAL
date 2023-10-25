@@ -31,8 +31,7 @@ class DoctorLogin(DoctorLoginTemplate):
     pass
 
   def doctor_login_click(self, **event_args):
-    
-    if AppState.Dtypedp == AppState.Dpassword and AppState.Dtypedu == AppState.Dusername:
+    if anvil.server.call('checkDAccount', AppState.Dtypedu, AppState.Dtypedp) :
       open_form('DoctorUI')
     else:  
       print("no")

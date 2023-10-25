@@ -37,7 +37,7 @@ class PatientLogin(PatientLoginTemplate):
     print(AppState.Ppassword)
     print(AppState.Ptypedp)
       
-    if AppState.Ptypedp == AppState.Ppassword and AppState.Ptypedu == AppState.Pusername:
+    if anvil.server.call('checkPAccount', AppState.Ptypedu, AppState.Ptypedp) :
       open_form('PatientUI')
     else:  
       print("no")
