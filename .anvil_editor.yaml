@@ -9,7 +9,8 @@ unique_ids:
     PatientUI: '1698191370417100583055237.39142'
   modules:
     Variables: '1698191373502651215548117.5725'
-  server_modules: {}
+  server_modules:
+    Outside: '1698192925224458359657446.8285'
   assets:
     standard-page.html: Z4ULLN7JT6XMBGCKNFOZWYP4JW2TU22H
     theme.css: QMEGGQXAHTI24K7JRYQP5JYRFZPQ5XRL

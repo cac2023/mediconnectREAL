@@ -1,6 +1,11 @@
 from ._anvil_designer import DoctorSignUpTemplate
 from anvil import *
+import anvil.server
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 from ..Variables import AppState
+
 
 class DoctorSignUp(DoctorSignUpTemplate):
   def __init__(self, **properties):
@@ -18,6 +23,8 @@ class DoctorSignUp(DoctorSignUpTemplate):
     pass
 
   def confirm_click(self, **event_args):
+     anvil.server.call('Outside.addDocTable',AppState.Dusername, AppState.Dpassword)
+
      open_form('DoctorLogin')
      pass
 
