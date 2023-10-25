@@ -35,6 +35,9 @@ db_schema:
     - name: Password
       admin_ui: {width: 200, order: 1}
       type: string
+    - name: Name
+      admin_ui: {width: 200, order: 2}
+      type: string
     title: Doctor
   patient:
     client: none
@@ -45,5 +48,20 @@ db_schema:
       type: string
     - name: Password
       admin_ui: {width: 200, order: 1}
+      type: string
+    - name: UniqueCode
+      admin_ui: {order: 3, width: 200}
+      type: string
+    - name: Name
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: Diagnosis
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: Medications
+      admin_ui: {width: 200, order: 6}
+      type: string
+    - name: Schedule
+      admin_ui: {width: 200, order: 7}
       type: string
     title: Patient

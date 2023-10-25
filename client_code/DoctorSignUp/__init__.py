@@ -8,6 +8,7 @@ from ..Variables import AppState
 
 
 class DoctorSignUp(DoctorSignUpTemplate):
+  
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -18,7 +19,8 @@ class DoctorSignUp(DoctorSignUpTemplate):
   def confirm_click(self, **event_args):
     AppState.Dusername=self.username_sign.text
     AppState.Dpassword=self.password_sign.text
-    anvil.server.call('add_doctor', AppState.Dusername, AppState.Dpassword)
+    AppState.DName=self.nameD.text
+    anvil.server.call('add_doctor', AppState.Dusername, AppState.Dpassword, AppState.DName)
 
     open_form('DoctorLogin')
     pass

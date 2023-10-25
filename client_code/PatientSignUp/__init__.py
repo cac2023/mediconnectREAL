@@ -16,10 +16,15 @@ class PatientSignUp(PatientSignUpTemplate):
   def confirm_click(self, **event_args):
     AppState.Pusername=self.username_sign.text
     AppState.Ppassword=self.password_sign.text
-    anvil.server.call('add_patient', AppState.Pusername, AppState.Ppassword)
+    AppState.PCode = self.text_box_1.text
+    AppState.PName=self.namebox.text
+    anvil.server.call('add_patient', AppState.Pusername, AppState.Ppassword, AppState.PCode, AppState.PName)
 
     open_form('PatientLogin')
     pass
+
+
+
 
 
 

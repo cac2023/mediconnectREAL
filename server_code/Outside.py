@@ -4,12 +4,12 @@ from anvil.tables import app_tables
 import anvil.server
 
 @anvil.server.callable
-def add_doctor(user, pas):
-  app_tables.doctor.add_row(Username=user, Password=pas)
+def add_doctor(user, pas, name):
+  app_tables.doctor.add_row(Username=user, Password=pas, Name=name)
 
 @anvil.server.callable
-def add_patient(user, pas):
-  app_tables.patient.add_row(Username=user, Password=pas)
+def add_patient(user, pas, code, name):
+  app_tables.patient.add_row(Username=user, Password=pas, UniqueCode=code, Name=name)
 
 @anvil.server.callable
 def checkDAccount(userx, pasx):
