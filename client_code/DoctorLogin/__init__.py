@@ -22,21 +22,14 @@ class DoctorLogin(DoctorLoginTemplate):
     open_form('DoctorSignUp')
     pass
 
-  def doctor_login_username_pressed_enter(self, **event_args):
-    AppState.Dtypedu = self.doctor_login_username.text
-    pass
-
-  def doctor_login_password_pressed_enter(self, **event_args):
-    AppState.Dtypedp = self.doctor_login_password.text
-    pass
 
   def doctor_login_click(self, **event_args):
+    AppState.Dtypedu = self.doctor_login_username.text 
+    AppState.Dtypedp = self.doctor_login_password.text
     if anvil.server.call('checkDAccount', AppState.Dtypedu, AppState.Dtypedp) :
       open_form('DoctorUI')
     else:  
       print("no")
-    
-      
     pass
 
 

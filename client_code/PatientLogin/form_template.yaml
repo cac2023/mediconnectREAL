@@ -1,35 +1,41 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {background: 'theme:primary'}
 components:
+- name: plback_button
+  properties: {text: Back, align: left, font: poppins, bold: true}
+  type: Button
+  layout_properties: {grid_position: 'WCKPDU,IASGOD'}
 - name: label_1_copy_1_copy_1
-  properties: {text: Patient Login, align: center, font_size: 50, font: Proxima Nova,
-    bold: true}
+  properties: {text: Patient Login, align: center, font_size: 50, font: poppins, bold: true}
   type: Label
   layout_properties: {grid_position: 'PEKYQL,ASTMTI'}
 - name: label_2_copy_1_copy_1
-  properties: {text: Username, align: center, bold: true, font_size: 20}
+  properties: {text: Username, align: center, bold: true, font_size: 20, font: poppins}
   type: Label
   layout_properties: {grid_position: 'LATQHL,CNLLRV'}
 - name: patient_login_username
-  properties: {text: ''}
+  properties: {text: '', font: poppins}
   type: TextBox
   layout_properties: {grid_position: 'RNZLYZ,IJFXRY'}
-  event_bindings: {pressed_enter: doctor_login_username_pressed_enter}
+  event_bindings: {}
 - name: label_3_copy_1_copy_1
-  properties: {text: Password, align: center, bold: true, font_size: 20}
+  properties: {text: Password, align: center, bold: true, font_size: 20, font: poppins}
   type: Label
   layout_properties: {grid_position: 'MXBAOU,QIOWVK'}
 - name: patient_login_password
-  properties: {text: ''}
+  properties: {text: '', font: poppins}
   type: TextBox
   layout_properties: {grid_position: 'MZSCBF,WNRYPF'}
-  event_bindings: {pressed_enter: doctor_login_password_pressed_enter}
+  event_bindings: {}
 - name: password_login
-  properties: {text: Login, spacing_above: medium}
+  properties: {text: Login, spacing_above: medium, font: poppins}
   type: Button
   layout_properties: {grid_position: 'UGWXUV,RJPWIF'}
   event_bindings: {click: doctor_login_click}
 - name: password_signup
-  properties: {text: 'Don''t have an account? Create One', spacing_above: medium}
+  properties: {text: 'Don''t have an account? Create One', spacing_above: medium,
+    font: poppins}
   type: Button
   layout_properties: {grid_position: 'RHLVAV,CUDUXJ'}
   event_bindings: {click: doctor_signup_click}

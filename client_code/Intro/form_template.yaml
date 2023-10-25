@@ -1,19 +1,21 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {background: 'theme:primary', border: '', foreground: ''}
 components:
 - name: label_1_copy_1
   properties: {role: null, align: center, visible: true, text: MediConnect, font_size: 50,
     font: Poppins, italic: false, background: '', bold: true}
   type: Label
-  layout_properties: {grid_position: 'PHJAUJ,IXUAJX'}
+  layout_properties: {grid_position: 'OEJIUK,MGVHDF'}
   data_bindings:
   - {property: role, code: '', writeback: false}
 - name: button_doctor
-  properties: {text: Doctor, border: '', font: ''}
+  properties: {text: Doctor, border: '', font: poppins}
   type: Button
   layout_properties: {grid_position: 'IGVIPU,NASECX'}
   event_bindings: {click: button_doctor_click}
 - name: button_patient
-  properties: {text: Patient, font_size: null}
+  properties: {text: Patient, font_size: null, font: poppins}
   type: Button
   layout_properties: {grid_position: 'BOYDWG,QPASSF'}
   event_bindings: {click: button_patient_click}

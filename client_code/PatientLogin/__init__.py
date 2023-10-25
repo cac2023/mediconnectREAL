@@ -22,20 +22,10 @@ class PatientLogin(PatientLoginTemplate):
     open_form('PatientSignUp')
     pass
 
-  def doctor_login_username_pressed_enter(self, **event_args):
-    AppState.Ptypedu = self.patient_login_username.text
-    pass
-
-  def doctor_login_password_pressed_enter(self, **event_args):
-    AppState.Ptypedp = self.patient_login_password.text
-    pass
-
   def doctor_login_click(self, **event_args):
 
-    print(AppState.Pusername)
-    print(AppState.Ptypedu)
-    print(AppState.Ppassword)
-    print(AppState.Ptypedp)
+    AppState.Ptypedu = self.patient_login_username.text
+    AppState.Ptypedp = self.patient_login_password.text
       
     if anvil.server.call('checkPAccount', AppState.Ptypedu, AppState.Ptypedp) :
       open_form('PatientUI')

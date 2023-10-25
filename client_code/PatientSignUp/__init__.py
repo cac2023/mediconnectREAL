@@ -13,19 +13,13 @@ class PatientSignUp(PatientSignUpTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def usernmae_sign_pressed_enter(self, **event_args):
-    AppState.Pusername=self.usernmae_sign.text
-    pass
-
-  def password_sign_pressed_enter(self, **event_args):
-    AppState.Ppassword=self.password_sign.text
-    pass
-
   def confirm_click(self, **event_args):
-     anvil.server.call('add_patient', AppState.Pusername, AppState.Ppassword)
+    AppState.Pusername=self.username_sign.text
+    AppState.Ppassword=self.password_sign.text
+    anvil.server.call('add_patient', AppState.Pusername, AppState.Ppassword)
 
-     open_form('PatientLogin')
-     pass
+    open_form('PatientLogin')
+    pass
 
 
 
