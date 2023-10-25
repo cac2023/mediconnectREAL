@@ -14,7 +14,7 @@ class DoctorSignUp(DoctorSignUpTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def usernmae_sign_pressed_enter(self, **event_args):
+  def username_sign_pressed_enter(self, **event_args):
     AppState.Dusername=self.usernmae_sign.text
     pass
 

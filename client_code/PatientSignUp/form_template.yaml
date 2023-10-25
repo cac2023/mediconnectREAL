@@ -1,18 +1,19 @@
 container: {type: ColumnPanel}
 components:
 - name: label_1_copy_1
-  properties: {text: Create A Patient Account, align: center, bold: true}
+  properties: {text: Create A Patient Account, align: center, bold: true, font: poppins,
+    font_size: 30}
   type: Label
   layout_properties: {grid_position: 'LHSAJA,ADEEKA'}
 - name: label_1_copy_1_copy_1
   properties: {text: Username, align: center}
   type: Label
   layout_properties: {grid_position: 'QGPQZI,IUIBZF'}
-- name: usernmae_sign
+- name: username_sign
   properties: {}
   type: TextBox
   layout_properties: {grid_position: 'IKDNHN,HTMJWD'}
-  event_bindings: {pressed_enter: usernmae_sign_pressed_enter}
+  event_bindings: {pressed_enter: username_sign_pressed_enter}
 - name: label_1_copy_1_copy_1_copy_1
   properties: {text: Password, align: center}
   type: Label

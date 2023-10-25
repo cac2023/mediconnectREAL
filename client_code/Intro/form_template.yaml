@@ -1,11 +1,12 @@
 container: {type: ColumnPanel}
 components:
 - name: label_1_copy_1
-  properties: {text: MediConnect, align: center, background: '', visible: true, font_size: 50,
-    bold: true, font: Proxima Nova}
+  properties: {role: null, align: center, visible: true, text: MediConnect, font_size: 50,
+    font: Poppins, italic: false, background: '', bold: true}
   type: Label
   layout_properties: {grid_position: 'PHJAUJ,IXUAJX'}
-  data_bindings: []
+  data_bindings:
+  - {property: role, code: '', writeback: false}
 - name: button_doctor
   properties: {text: Doctor, border: '', font: ''}
   type: Button
