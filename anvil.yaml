@@ -12,6 +12,17 @@ db_schema:
       admin_ui: {width: 200, order: 1}
       type: string
     title: Doctor
+  patient:
+    client: none
+    server: full
+    columns:
+    - name: Username
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Password
+      admin_ui: {width: 200, order: 1}
+      type: string
+    title: Patient
 startup: {type: form, module: Intro}
 name: Custom HTML 1
 startup_form: null

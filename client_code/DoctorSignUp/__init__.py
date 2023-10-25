@@ -23,7 +23,7 @@ class DoctorSignUp(DoctorSignUpTemplate):
     pass
 
   def confirm_click(self, **event_args):
-     anvil.server.call('Outside.addDocTable',AppState.Dusername, AppState.Dpassword)
+     anvil.server.call('add_doctor', AppState.Dusername, AppState.Dpassword)
 
      open_form('DoctorLogin')
      pass
