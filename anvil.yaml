@@ -38,6 +38,9 @@ db_schema:
     - name: Name
       admin_ui: {width: 200, order: 2}
       type: string
+    - name: Patient Codes
+      admin_ui: {width: 200, order: 3}
+      type: simpleObject
     title: Doctor
   patient:
     client: search
