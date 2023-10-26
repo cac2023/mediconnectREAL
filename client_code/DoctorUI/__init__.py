@@ -9,9 +9,10 @@ from ..Variables import AppState
 class DoctorUI(DoctorUITemplate):
   
   
-  name = str(AppState.DName)
+  index = anvil.server.call('getDIndex', AppState.Dtypedu, AppState.Dtypedp)
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    print(self.index)
 
     # Any code you write here will run before the form opens.
