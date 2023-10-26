@@ -8,7 +8,7 @@ from ..Variables import AppState
 
 
 class PatientUI(PatientUITemplate):
-  #names = AppState.PName
+  names = AppState.PatientName
   #diagnosis = anvil.server.call('getDiagnosis', AppState.Pusername)
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.

@@ -28,6 +28,7 @@ class DoctorLogin(DoctorLoginTemplate):
     AppState.Dtypedp = self.doctor_login_password.text
     if anvil.server.call('checkDAccount', AppState.Dtypedu, AppState.Dtypedp) :
       AppState.Dindex = anvil.server.call('getDIndex', AppState.Dtypedu, AppState.Dtypedp)
+      AppState.DoctorName = anvil.server.call('getDoctorName', AppState.Dindex)
 
       open_form('DoctorUI')
     else:  

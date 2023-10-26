@@ -31,6 +31,7 @@ class PatientLogin(PatientLoginTemplate):
       
     if anvil.server.call('checkPAccount', AppState.Ptypedu, AppState.Ptypedp) :
       AppState.Pindex = anvil.server.call('getPIndex', AppState.Ptypedu, AppState.Ptypedp)
+      AppState.PatientName = anvil.server.call('getPatientName', AppState.Pindex)
 
       open_form('PatientUI')
     else:  

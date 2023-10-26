@@ -40,6 +40,10 @@ def getDoctorName(indexs):
   table_data = app_tables.doctor.search()
   return table_data[indexs]['Name']
 
+@anvil.server.callable
+def getPatientName(indexs):
+  table_data = app_tables.patient.search()
+  return table_data[indexs]['Name']
   
 
 @anvil.server.callable
