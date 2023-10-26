@@ -4,6 +4,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class AppState:
+    Pindex=0
     Dindex = 0
     DName = "fj"
     PName="nib"

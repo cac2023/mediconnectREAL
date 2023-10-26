@@ -7,7 +7,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'ONDLFM,VKRDPW'}
   data_bindings:
-  - {property: text, code: '''Hello'' + self.names', writeback: false}
+  - {property: text, code: '''Hello'' ', writeback: false}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel

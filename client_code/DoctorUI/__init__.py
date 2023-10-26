@@ -7,11 +7,12 @@ from anvil.tables import app_tables
 from ..Variables import AppState
 
 class DoctorUI(DoctorUITemplate):
-  
+  INDEX = anvil.server.call('getDoctorName', AppState.Dindex)
+
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    print(AppState.Dindex)
+    
 
     # Any code you write here will run before the form opens.
 

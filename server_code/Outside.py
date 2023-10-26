@@ -21,7 +21,24 @@ def getDIndex(user, pas):
         return i
   return -1
         
-    
+@anvil.server.callable
+def getPIndex(user, pas):
+  index = None
+
+  table_data = list(app_tables.patient.search())
+
+  condition = lambda row: row['Username'] == user and row['Password'] == pas
+
+  
+  for i, row in enumerate(table_data):
+      if condition(row):
+        return i
+  return -1    
+
+@anvil.server.callable
+def getDoctorName(indexs):
+  table_data = app_tables.doctor.search()
+  return table_data[indexs]['Name']
 
   
 

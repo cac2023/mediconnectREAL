@@ -30,6 +30,8 @@ class PatientLogin(PatientLoginTemplate):
     AppState.Ptypedp = self.patient_login_password.text
       
     if anvil.server.call('checkPAccount', AppState.Ptypedu, AppState.Ptypedp) :
+      AppState.Pindex = anvil.server.call('getPIndex', AppState.Ptypedu, AppState.Ptypedp)
+
       open_form('PatientUI')
     else:  
       ##self.rich_text_1.visible = True

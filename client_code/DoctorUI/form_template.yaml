@@ -8,5 +8,5 @@ components:
   type: Label
   layout_properties: {grid_position: 'LBZKFE,BMWAGQ'}
   data_bindings:
-  - {property: text, code: '''Hello Doctor '' + self.name', writeback: false}
+  - {property: text, code: '''Hello Doctor '' ', writeback: false}
 is_package: true
