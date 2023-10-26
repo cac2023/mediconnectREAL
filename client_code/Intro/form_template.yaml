@@ -1,6 +1,7 @@
 container:
   type: ColumnPanel
-  properties: {background: '#9DD9F3', border: '', foreground: ''}
+  properties: {background: '#9DD9F3', border: '', foreground: '', wrap_on: mobile,
+    spacing_below: small, spacing_above: small}
 components:
 - name: label_1_copy_1
   properties: {role: null, align: center, visible: true, text: MediConnect, font_size: 50,
@@ -23,3 +24,4 @@ components:
 is_package: true
 data_bindings:
 - {property: visible, code: 'self.item['''']', writeback: false}
+- {property: wrap_on, code: 'self.item['''']', writeback: false}
