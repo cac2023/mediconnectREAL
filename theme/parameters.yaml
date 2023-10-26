@@ -2,3 +2,4 @@ roles: []
 color_scheme:
   colors:
   - {name: primary, color: '#ffb955'}
+  - {name: blueeeee, color: '#9DD9F3'}

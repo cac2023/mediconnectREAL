@@ -25,5 +25,11 @@ class DoctorSignUp(DoctorSignUpTemplate):
     open_form('DoctorLogin')
     pass
 
+  def dsback_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('DoctorLogin')
+    pass
+
+
 
 

@@ -11,10 +11,11 @@ def add_doctor(user, pas, name):
 def getDIndex(user, pas):
   index = None
 
-  table_data = app_tables.doctor.search()
+  table_data = list(app_tables.doctor.search())
 
   condition = lambda row: row['Username'] == user and row['Password'] == pas
 
+  
   for i, row in enumerate(table_data):
       if condition(row):
         return i

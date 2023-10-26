@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {background: 'theme:primary'}
+  properties: {background: 'theme:blueeeee'}
 components:
 - name: plback_button
   properties: {text: Back, align: left, font: poppins, bold: true}
@@ -29,8 +29,15 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'MZSCBF,WNRYPF'}
   event_bindings: {}
+- name: rich_text_1
+  properties: {align: center, content: We do not have an account associated with this info.,
+    foreground: '#e21414', font: poppins, font_size: 16, format: markdown, visible: false,
+    spacing_below: none}
+  type: RichText
+  layout_properties: {grid_position: 'GLPOXC,JCEKPX'}
+  event_bindings: {}
 - name: password_login
-  properties: {text: Login, spacing_above: medium, font: poppins}
+  properties: {text: Login, spacing_above: none, font: poppins}
   type: Button
   layout_properties: {grid_position: 'UGWXUV,RJPWIF'}
   event_bindings: {click: doctor_login_click}

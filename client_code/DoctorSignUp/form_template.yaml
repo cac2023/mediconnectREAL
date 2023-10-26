@@ -1,18 +1,19 @@
 container:
   type: ColumnPanel
-  properties: {background: 'theme:primary'}
+  properties: {background: '#9DD9F3'}
 components:
 - name: dsback_button
   properties: {text: Back, align: left, font: poppins, bold: true}
   type: Button
   layout_properties: {grid_position: 'ANAARM,ZIVSXP'}
+  event_bindings: {click: dsback_button_click}
 - name: label_1_copy_1
   properties: {text: Create A Doctor Account, align: center, bold: true, font: poppins,
     font_size: 40}
   type: Label
   layout_properties: {grid_position: 'OSRJQI,YVGZYW'}
 - name: label_1
-  properties: {text: Name, align: center, bold: true}
+  properties: {text: Name, align: center, bold: true, font: poppins, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'OGGBWX,EJIOHN'}
 - name: nameD

@@ -22,6 +22,8 @@ class PatientLogin(PatientLoginTemplate):
     open_form('PatientSignUp')
     pass
 
+  ##self.rich_text_1.visible = False
+  
   def doctor_login_click(self, **event_args):
 
     AppState.Ptypedu = self.patient_login_username.text
@@ -30,6 +32,7 @@ class PatientLogin(PatientLoginTemplate):
     if anvil.server.call('checkPAccount', AppState.Ptypedu, AppState.Ptypedp) :
       open_form('PatientUI')
     else:  
+      ##self.rich_text_1.visible = True
       print("no")
     
       

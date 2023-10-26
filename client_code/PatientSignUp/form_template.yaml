@@ -6,6 +6,7 @@ components:
   properties: {text: Back, align: left, bold: true, font: poppins}
   type: Button
   layout_properties: {grid_position: 'PMFMDW,TIVZZD'}
+  event_bindings: {click: psback_button_click}
 - name: label_1_copy_1
   properties: {text: Create A Patient Account, align: center, bold: true, font: poppins,
     font_size: 40}
@@ -27,7 +28,7 @@ components:
   properties: {font: poppins}
   type: TextBox
   layout_properties: {grid_position: 'IKDNHN,HTMJWD'}
-  event_bindings: {pressed_enter: username_sign_pressed_enter}
+  event_bindings: {}
 - name: label_1_copy_1_copy_1_copy_1
   properties: {text: Password, align: center, font: poppins, font_size: 20, bold: true}
   type: Label

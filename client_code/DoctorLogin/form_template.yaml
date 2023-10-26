@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {background: 'theme:primary'}
+  properties: {background: 'theme:blueeeee'}
 components:
 - name: dlback_button
   properties: {text: Back, align: left, font: poppins, bold: true}
