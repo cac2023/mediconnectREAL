@@ -39,6 +39,11 @@ def checkDAccount(userx, pasx):
   return False
 
 @anvil.server.callable
+def getDiagnosis(userx):
+  return app_tables.patient.get(Username=userx)['Diagnosis']
+
+
+@anvil.server.callable
 def checkPAccount(userx, pasx):
   patient_table = app_tables.patient
   matching_row = patient_table.search(Username=userx, Password=pasx)

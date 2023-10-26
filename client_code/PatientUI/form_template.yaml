@@ -14,7 +14,11 @@ components:
   layout_properties: {grid_position: 'HCVPEL,FECHIJ'}
   components:
   - name: label_1
-    properties: {text: Your Diagnoses, font: poppins, font_size: 20, bold: true}
+    properties: {text: Your Diagnosis, font: poppins, font_size: 20, bold: true}
     type: Label
     layout_properties: {grid_position: 'AFJZIB,DKZFOI'}
+  - name: text_area_1
+    properties: {}
+    type: TextArea
+    layout_properties: {grid_position: 'UPEVZL,SIBKEL'}
 is_package: true
