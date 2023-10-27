@@ -17,7 +17,7 @@ class DoctorUI(DoctorUITemplate):
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
-    open_form('AddPatients')
+    open_form('AddPatient')
     pass
 
   def button_2_click(self, **event_args):
