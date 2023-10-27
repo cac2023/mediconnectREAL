@@ -4,18 +4,22 @@ container:
 components:
 - name: DLname
   properties: {text: '', align: center, bold: true, background: '', font: poppins,
-    font_size: 26, italic: false}
+    font_size: 40, italic: false}
   type: Label
   layout_properties: {grid_position: 'LBZKFE,BMWAGQ'}
   data_bindings:
   - {property: text, code: '''Hello Doctor '' + self.Namess', writeback: false}
+- name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'IAORBO,STIGTR'}
 - name: button_1
-  properties: {text: Add Patient}
+  properties: {text: Add Patient, font: poppins, font_size: 22}
   type: Button
   layout_properties: {grid_position: 'RRXFMQ,JUICUZ'}
   event_bindings: {click: button_1_click}
 - name: button_2
-  properties: {text: Edit Patient}
+  properties: {text: Edit Patient, spacing_above: medium, font: poppins, font_size: 22}
   type: Button
   layout_properties: {grid_position: 'YTFYJV,GGOBPI'}
   event_bindings: {click: button_2_click}

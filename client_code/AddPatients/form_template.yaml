@@ -3,25 +3,7 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-  components: []
-- name: label_1_copy_1_copy_1
-  properties: {text: Add a Patient, align: center, font_size: 50, font: poppins, bold: true}
-  type: Label
-  layout_properties: {slot: default}
-- name: label_1
-  properties: {text: Enter Patient Code, align: center, bold: true}
-  type: Label
-  layout_properties: {slot: default}
 - name: enterCode
-  properties: {}
+  properties: {align: center}
   type: TextBox
   layout_properties: {slot: default}
-- name: Entercode
-  properties: {text: Enter}
-  type: Button
-  layout_properties: {slot: default}
-  event_bindings: {click: Entercode_click}

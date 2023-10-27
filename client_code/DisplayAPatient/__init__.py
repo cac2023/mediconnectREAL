@@ -23,3 +23,4 @@ class DisplayAPatient(DisplayAPatientTemplate):
       open_form('EditPatient')
     pass
 
+
