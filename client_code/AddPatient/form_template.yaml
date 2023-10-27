@@ -3,7 +3,7 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
 components:
-- name: enterCode
-  properties: {align: center}
-  type: TextBox
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
   layout_properties: {slot: default}
