@@ -4,6 +4,11 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class AppState:
+    currentDiag = ''
+    currentMed = ''
+    patientsCode = ''
+    currentName = ''
+    currentCode = ''
     DoctorName='d'
     PatientName='f'
     Pindex=0

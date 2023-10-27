@@ -7,3 +7,22 @@ components:
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
+- name: label_1_copy_1_copy_1_copy_1
+  properties: {text: Edit your patient, align: center, font_size: 50, font: poppins,
+    bold: true}
+  type: Label
+  layout_properties: {slot: default}
+- name: label_1_copy_1
+  properties: {text: Enter Patient Code, align: center, bold: true}
+  type: Label
+  layout_properties: {slot: default}
+- name: text_box_1
+  properties: {}
+  type: TextBox
+  layout_properties: {slot: default}
+  event_bindings: {pressed_enter: text_box_1_pressed_enter}
+- name: Enters
+  properties: {text: Enter}
+  type: Button
+  layout_properties: {slot: default}
+  event_bindings: {click: Enters_click}

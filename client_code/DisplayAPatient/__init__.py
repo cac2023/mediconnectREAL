@@ -4,6 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ..Variables import AppState
 
 class DisplayAPatient(DisplayAPatientTemplate):
   def __init__(self, **properties):
@@ -11,3 +12,14 @@ class DisplayAPatient(DisplayAPatientTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+
+
+  def Enters_click(self, **event_args):
+    f = self.text_box_1.text
+    if anvil.server.call('checkDoctorCodes', AppState.Dindex, f ) :
+      AppState.currentCode=f
+      AppState.currentName = anvil.server.call('getThePatientsName', AppState.currentCode)
+      open_form('EditPatient')
+    pass
+

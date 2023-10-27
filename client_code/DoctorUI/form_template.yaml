@@ -14,4 +14,9 @@ components:
   type: Button
   layout_properties: {grid_position: 'RRXFMQ,JUICUZ'}
   event_bindings: {click: button_1_click}
+- name: button_2
+  properties: {text: Edit Patient}
+  type: Button
+  layout_properties: {grid_position: 'YTFYJV,GGOBPI'}
+  event_bindings: {click: button_2_click}
 is_package: true

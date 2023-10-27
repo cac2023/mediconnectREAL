@@ -20,4 +20,8 @@ class DoctorUI(DoctorUITemplate):
     open_form('AddPatients')
     pass
 
+  def button_2_click(self, **event_args):
+    open_form('DisplayAPatient')
+    pass
+
 

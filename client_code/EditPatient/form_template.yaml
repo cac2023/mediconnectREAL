@@ -1,0 +1,30 @@
+container: {type: ColumnPanel}
+components:
+- name: label_1
+  properties: {align: center, bold: true, text: ''}
+  type: Label
+  layout_properties: {grid_position: 'VHXWNJ,KCGRGK'}
+  data_bindings:
+  - {property: text, code: '''Edit '' + self.named + "''s page"', writeback: false}
+- name: label_2
+  properties: {align: center, bold: true, text: Edit Medications}
+  type: Label
+  layout_properties: {grid_position: 'OYYDTG,NVYPJU'}
+- name: med
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'WMGFUK,JWQVYP'}
+- name: label_3
+  properties: {align: center, bold: true, text: Edit Diagnostic}
+  type: Label
+  layout_properties: {grid_position: 'FBFFSU,GLODPF'}
+- name: dia
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'JNJGGY,UPZZKH'}
+- name: button_1
+  properties: {text: Enter}
+  type: Button
+  layout_properties: {grid_position: 'YDLNBD,GVUKTA'}
+  event_bindings: {click: button_1_click}
+is_package: true

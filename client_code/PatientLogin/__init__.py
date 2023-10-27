@@ -32,8 +32,14 @@ class PatientLogin(PatientLoginTemplate):
     if anvil.server.call('checkPAccount', AppState.Ptypedu, AppState.Ptypedp) :
       AppState.Pindex = anvil.server.call('getPIndex', AppState.Ptypedu, AppState.Ptypedp)
       AppState.PatientName = anvil.server.call('getPatientName', AppState.Pindex)
-
-      open_form('PatientUI')
+      AppState.patientsCode= anvil.server.call('getCodeFromIndex', AppState.Pindex)
+      if anvil.server.call('getdiFromIndex', AppState.Pindex) == '' :
+        open_form('NewPatient')
+      else :
+        AppState.currentDiag = anvil.server.call('getdiFromIndex', AppState.Pindex)
+        AppState.currentMed = anvil.server.call('getmFromIndex', AppState.Pindex)
+        
+        open_form('PatientUI')
     else:  
       ##self.rich_text_1.visible = True
       print("no")
