@@ -23,7 +23,7 @@ components:
 - name: button_patient
   properties: {text: Patient, font_size: 30, font: poppins, role: custom-button}
   type: Button
-  layout_properties: {grid_position: 'BOYDWG,QPASSF'}
+  layout_properties: {grid_position: 'BOYDWG,QPASSF', row_background: ''}
   event_bindings: {click: button_patient_click}
 is_package: true
 data_bindings:
