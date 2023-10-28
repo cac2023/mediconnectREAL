@@ -8,6 +8,11 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - name: button_1
+    properties: {text: Back, align: left, bold: true, font: poppins}
+    type: Button
+    layout_properties: {grid_position: 'DYAAGY,FJHJUK'}
+    event_bindings: {click: button_1_click}
   - name: label_1
     properties: {text: Edit Patient, font: poppins, font_size: 50, align: center,
       bold: true}

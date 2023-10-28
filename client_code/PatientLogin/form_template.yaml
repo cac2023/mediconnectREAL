@@ -40,13 +40,12 @@ components:
   layout_properties: {grid_position: 'GLPOXC,JCEKPX'}
   event_bindings: {}
 - name: password_login
-  properties: {text: Login, spacing_above: none, font: poppins}
+  properties: {text: Login, spacing_above: medium, font: poppins}
   type: Button
   layout_properties: {grid_position: 'UGWXUV,RJPWIF'}
   event_bindings: {click: doctor_login_click}
 - name: password_signup
-  properties: {text: 'Don''t have an account? Create One', spacing_above: medium,
-    font: poppins}
+  properties: {text: 'Don''t have an account? Create One', spacing_above: small, font: poppins}
   type: Button
   layout_properties: {grid_position: 'RHLVAV,CUDUXJ'}
   event_bindings: {click: doctor_signup_click}

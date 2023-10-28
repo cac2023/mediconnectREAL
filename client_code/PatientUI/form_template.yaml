@@ -3,7 +3,7 @@ container:
   properties: {background: 'theme:blueeeee', col_widths: '{"FECHIJ":35}'}
 components:
 - name: DLname_copy_1
-  properties: {text: '', align: center, bold: true, font: poppins, font_size: 26}
+  properties: {text: '', align: center, bold: true, font: poppins, font_size: 40}
   type: Label
   layout_properties: {grid_position: 'ONDLFM,VKRDPW'}
   data_bindings:
@@ -13,24 +13,35 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'HCVPEL,FECHIJ'}
   components:
+  - name: label_1_copy_1
+    properties: {text: Your Diagnosis, font: poppins, font_size: 25, bold: true, align: center}
+    type: Label
+    layout_properties: {grid_position: 'YXYIEG,TOYHZA'}
+  - name: label_3
+    properties: {font: poppins, font_size: 17, align: center}
+    type: Label
+    layout_properties: {grid_position: 'GBPDHF,MLLZWQ'}
+    data_bindings:
+    - {property: text, code: self.dif, writeback: false}
   - name: label_1
-    properties: {text: Your Medications, font: poppins, font_size: 20, bold: true}
+    properties: {text: Your Medications, font: poppins, font_size: 25, bold: true,
+      align: center}
     type: Label
     layout_properties: {grid_position: 'AFJZIB,DKZFOI'}
   - name: label_2
-    properties: {}
+    properties: {font: poppins, font_size: 17, align: center}
     type: Label
     layout_properties: {grid_position: 'QFLSCG,WGXSEV'}
     data_bindings:
     - {property: text, code: self.medd, writeback: false}
-- name: label_1_copy_1
-  properties: {text: Your Diagnosis, font: poppins, font_size: 20, bold: true}
-  type: Label
-  layout_properties: {grid_position: 'OBZCEQ,DOUHJU'}
-- name: label_3
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'CTPINF,OUILAL'}
-  data_bindings:
-  - {property: text, code: self.dif, writeback: false}
+  - name: label_1_copy_1_copy_1
+    properties: {text: Schedule, font: poppins, font_size: 25, bold: true, align: center}
+    type: Label
+    layout_properties: {grid_position: 'QFXUMP,KUIKQN'}
+  - name: label_4
+    properties: {font: poppins, font_size: 17, align: center}
+    type: Label
+    layout_properties: {grid_position: 'IQMZYT,ZHGCQR'}
+    data_bindings:
+    - {property: text, code: blank, writeback: false}
 is_package: true

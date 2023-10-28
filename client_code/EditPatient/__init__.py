@@ -21,3 +21,8 @@ class EditPatient(EditPatientTemplate):
     open_form('DoctorUI')
 
     pass
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('DisplayAPatient')
+    pass
