@@ -10,14 +10,19 @@ components:
   layout_properties: {grid_position: 'OEJIUK,MGVHDF'}
   data_bindings:
   - {property: role, code: '', writeback: false}
+- name: spacer_1
+  properties: {height: 17}
+  type: Spacer
+  layout_properties: {grid_position: 'HEXNTH,DSOXET'}
 - name: button_doctor
-  properties: {text: Doctor, border: '', font: poppins, background: '', visible: true}
+  properties: {text: Doctor, border: '', font: poppins, background: '', visible: true,
+    font_size: 30, spacing_below: medium}
   type: Button
   layout_properties: {grid_position: 'IGVIPU,NASECX'}
   event_bindings: {click: button_doctor_click}
   data_bindings: []
 - name: button_patient
-  properties: {text: Patient, font_size: null, font: poppins}
+  properties: {text: Patient, font_size: 30, font: poppins}
   type: Button
   layout_properties: {grid_position: 'BOYDWG,QPASSF'}
   event_bindings: {click: button_patient_click}

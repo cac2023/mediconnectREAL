@@ -24,3 +24,6 @@ class DisplayAPatient(DisplayAPatientTemplate):
     pass
 
 
+
+
+
