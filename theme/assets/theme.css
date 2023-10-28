@@ -1,0 +1,40 @@
+/* Change the background color of the entire app */
+body {
+    background-color: #e8f4f8;
+}
+
+/* Style the main header */
+#mediConnectHeader {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    color: #0d6efd;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Style the buttons */
+.anvil-role-custom-button {
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.anvil-role-custom-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+roles:
+  - name: custom-button
+    description: Custom styled button
+  - name: mediConnectHeader
+    description: Main header for MediConnect
+
+

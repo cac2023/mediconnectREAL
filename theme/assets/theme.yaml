@@ -1,0 +1,5 @@
+roles:
+  - name: custom-button
+    description: Custom styled button
+  - name: mediConnectHeader
+    description: Main header for MediConnect
