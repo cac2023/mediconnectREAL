@@ -154,3 +154,9 @@ def checkPAccount(userx, pasx):
     
   return False
 
+@anvil.server.callable
+
+@anvil.server.callable
+def shouldSendNotification(codex):
+  patient = app_tables.patient.get(UniqueCode=codex)
+  if()
