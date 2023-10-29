@@ -16,8 +16,10 @@ class EditPatient(EditPatientTemplate):
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
-    anvil.server.call('editMed', AppState.currentCode, self.med.text)
-    anvil.server.call('editDiag', AppState.currentCode, self.dia.text)
+    if self.med.text != '' :
+      anvil.server.call('editMed', AppState.currentCode, self.med.text)
+    if self.dia.text != '' :
+      anvil.server.call('editDiag', AppState.currentCode, self.dia.text)
     open_form('DoctorUI')
 
     pass
