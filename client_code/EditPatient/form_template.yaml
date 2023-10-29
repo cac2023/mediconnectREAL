@@ -13,6 +13,11 @@ components:
   layout_properties: {grid_position: 'VHXWNJ,KCGRGK'}
   data_bindings:
   - {property: text, code: '''Edit '' + self.named + "''s page"', writeback: false}
+- name: drop_down_1
+  properties: {}
+  type: DropDown
+  layout_properties: {grid_position: 'OKPFRA,CMTQZL'}
+  data_bindings: []
 - name: spacer_1
   properties: {height: 32}
   type: Spacer
