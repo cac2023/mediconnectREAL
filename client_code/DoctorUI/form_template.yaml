@@ -4,7 +4,7 @@ container:
 components:
 - name: DLname
   properties: {text: '', align: center, bold: true, background: '', font: poppins,
-    font_size: 40, italic: false}
+    font_size: 50, italic: false}
   type: Label
   layout_properties: {grid_position: 'LBZKFE,BMWAGQ'}
   data_bindings:
@@ -13,14 +13,20 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'IAORBO,STIGTR'}
-- name: button_1
-  properties: {text: Add Patient, font: poppins, font_size: 22}
-  type: Button
-  layout_properties: {grid_position: 'RRXFMQ,JUICUZ'}
-  event_bindings: {click: button_1_click}
-- name: button_2
-  properties: {text: Edit Patient, spacing_above: medium, font: poppins, font_size: 22}
-  type: Button
-  layout_properties: {grid_position: 'YTFYJV,GGOBPI'}
-  event_bindings: {click: button_2_click}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'BVGUTH,EZMGIP'}
+  components:
+  - name: button_1
+    properties: {text: Add Patient, font: poppins, font_size: 22, align: center}
+    type: Button
+    layout_properties: {grid_position: 'XSKNCJ,KKNQNN'}
+    event_bindings: {click: button_1_click}
+  - name: button_2
+    properties: {text: Edit Patient, spacing_above: medium, font: poppins, font_size: 23,
+      align: center}
+    type: Button
+    layout_properties: {grid_position: 'XSKNCJ,NXVOAO'}
+    event_bindings: {click: button_2_click}
 is_package: true
