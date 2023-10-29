@@ -25,8 +25,7 @@ body {
     margin: 20; /* Remove margin to make the button fill the container */
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100%; /* Make the button fill the width of the container */
-    height: 100%; /* Make the button fill the height of the container */
+    
 }
 
 .anvil-role-custom-button:hover {

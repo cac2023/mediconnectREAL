@@ -15,15 +15,15 @@ components:
   layout_properties: {grid_position: 'HEXNTH,DSOXET'}
 - name: button_doctor
   properties: {role: null, align: center, border: '', enabled: true, foreground: '#ffffff',
-    visible: true, text: Doctor, font_size: 30, font: poppins, spacing_below: medium,
-    background: '#3f3f45', bold: false}
+    visible: true, text: Doctor, font_size: 74, font: poppins, spacing_above: medium,
+    spacing_below: medium, background: '#3f3f45', bold: false}
   type: Button
   layout_properties: {grid_position: 'IGVIPU,NASECX'}
   event_bindings: {click: button_doctor_click}
   data_bindings: []
 - name: button_patient
-  properties: {text: Patient, font_size: 30, font: poppins, role: null, background: '#3f3f45',
-    foreground: '#ffffff'}
+  properties: {text: Patient, font_size: 75, font: poppins, role: null, background: '#3f3f45',
+    foreground: '#ffffff', spacing_above: medium}
   type: Button
   layout_properties: {grid_position: 'BOYDWG,QPASSF', row_background: ''}
   event_bindings: {click: button_patient_click}
