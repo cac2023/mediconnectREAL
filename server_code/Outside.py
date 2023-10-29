@@ -109,6 +109,13 @@ def getCodeFromIndex(index) :
    return row['UniqueCode']
 
 @anvil.server.callable
+def setSchedule(code, number) :
+  index = getPatientIndexFromCode(code)
+  table_data = app_tables.patient.search()      
+  row = table_data[index]
+  row['Schedule'] = number
+  
+@anvil.server.callable
 def getdiFromIndex(index) :
    table_data = app_tables.patient.search()      
    row = table_data[index]
