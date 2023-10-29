@@ -1,6 +1,6 @@
 
 body {
-    background: linear-gradient(to right, #ba3487, #feb47b); /* This creates a gradient from pink to orange */
+    background: linear-gradient(to right, #83EAF1, #63A4FF); /* This creates a gradient from pink to orange */
     color: white; /* This makes the text color white for better visibility on the dark background */
 }
 
@@ -16,13 +16,13 @@ body {
 .anvil-role-custom-button {
     background-color: #3f3f45; /* Black color */
     border: white;
-    border-radius: 25px;
+    border-radius: 55px;
     color: white;
-    padding: 30px 60px;
+    padding: 50px 60px;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    margin: 10; /* Remove margin to make the button fill the container */
+    margin: 20; /* Remove margin to make the button fill the container */
     cursor: pointer;
     transition: background-color 0.3s;
     width: 100%; /* Make the button fill the width of the container */
