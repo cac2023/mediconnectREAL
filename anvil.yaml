@@ -70,4 +70,7 @@ db_schema:
     - name: MediTime
       admin_ui: {width: 200, order: 9}
       type: datetime
+    - name: LastMedi
+      admin_ui: {width: 200, order: 10}
+      type: datetime
     title: Patient

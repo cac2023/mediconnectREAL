@@ -3,6 +3,9 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import datetime
+from multiprocessing import Process
+
+import time
 
 @anvil.server.callable
 def add_doctor(user, pas, name):
@@ -156,17 +159,39 @@ def checkPAccount(userx, pasx):
   return False
 
 @anvil.server.callable
-def setMediTime(code, time):
+def setMediTime(code):
   index = getPatientIndexFromCode(code)
   table_data = app_tables.patient.search()      
   row = table_data[index]
   current_datetime = datetime.datetime.now()
   number = row['Schedule']
-  days_to_add, seconds = divmod(number, 86400)
-  hours_to_add, seconds = divmod(seconds, 3600)
-  minutes_to_add, seconds = divmod(rest, 60)
-  
-  time_to_add = datetime.timedelta(days=days_to_add, hours=hours_to_add, minutes=minutes_to_add, seconds=seconds_to_add)
-  row['MediTime'] = row['Schedule']
 
   
+  time_to_add = datetime.timedelta(seconds=number)
+  row['MediTime'] = current_datetime + time_to_add
+
+@anvil.server.callable
+def setLastMediTime(code):
+  index = getPatientIndexFromCode(code)
+  table_data = app_tables.patient.search()      
+  row = table_data[index]
+  current_datetime = datetime.datetime.now()
+ 
+  row['LastMedi'] = current_datetime
+
+
+  
+def checks():
+  table_data = app_tables.patient.search()
+  for row in table_data:
+    if row['LastMedi']!= None:
+      if datetime.datetime.now()>= row['MediTime']:
+        row['LastMedi'] = row['MediTime']
+        row['MediTime'] = row['MediTime'] + datetime.timedelta(seconds=row['Schedule'])
+  time.sleep(1)
+
+my_process = Process(target=checks())
+my_process.start()
+
+
+        
