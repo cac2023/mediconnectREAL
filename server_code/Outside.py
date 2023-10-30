@@ -2,6 +2,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+import datetime
 
 @anvil.server.callable
 def add_doctor(user, pas, name):
@@ -155,8 +156,17 @@ def checkPAccount(userx, pasx):
   return False
 
 @anvil.server.callable
+def setMediTime(code, time):
+  index = getPatientIndexFromCode(code)
+  table_data = app_tables.patient.search()      
+  row = table_data[index]
+  current_datetime = datetime.datetime.now()
+  number = row['Schedule']
+  days_to_add, seconds = divmod(number, 86400)
+  hours_to_add, seconds = divmod(seconds, 3600)
+  minutes_to_add, seconds = divmod(rest, 60)
+  
+  time_to_add = datetime.timedelta(days=days_to_add, hours=hours_to_add, minutes=minutes_to_add, seconds=seconds_to_add)
+  row['MediTime'] = row['Schedule']
 
-@anvil.server.callable
-def shouldSendNotification(codex):
-  patient = app_tables.patient.get(UniqueCode=codex)
-  if()
+  

@@ -67,4 +67,7 @@ db_schema:
     - name: Schedule
       admin_ui: {order: 8, width: 200}
       type: number
+    - name: MediTime
+      admin_ui: {width: 200, order: 9}
+      type: datetime
     title: Patient

@@ -45,7 +45,8 @@ class EditPatient(EditPatientTemplate):
         multiplier = 31556926
       value = int(self.timings.text) * multiplier
       anvil.server.call('setSchedule', AppState.currentCode, value )
-      
+      anvil.server.call('setMediTime', AppState.currentCode, value )
+    
     open_form('DoctorUI')
 
     pass
