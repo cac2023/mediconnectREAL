@@ -5,6 +5,7 @@ import anvil.server
 import datetime
 import time
 import anvil.server
+import threading
 
 @anvil.server.callable
 def add_doctor(user, pas, name):
@@ -178,6 +179,15 @@ def setLastMediTime(code):
  
   row['LastMedi'] = current_datetime
 
+@anvil.server.callable
+def checks():
+  table_data = app_tables.patient.search()
+  for row in table_data:
+    if row['LastMedi'] is not None:
 
+
+      if datetime.datetime.now()>= row['MediTime'].replace(tzinfo=None):
+        row['LastMedi'] = row['MediTime']
+        row['MediTime'] = row['MediTime'] + datetime.timedelta(seconds=row['Schedule'])
 
         
