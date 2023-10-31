@@ -41,7 +41,7 @@ class PatientLogin(PatientLoginTemplate):
         index = AppState.Pindex
         table_data = app_tables.patient.search()      
         row = table_data[index]
-        current_datetime = datetime.datetime.now()
+        current_datetime = datetime.datetime.now(timezone.utc)
         AppState.ii=AppState.Pindex
         AppState.qqs=anvil.server.call('getQuestion', AppState.ii)
         AppState.aas=anvil.server.call('getAnswer', AppState.ii)
