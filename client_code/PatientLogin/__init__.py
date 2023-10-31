@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..Variables import AppState
 import datetime
+from datetime import timezone
 
 
 class PatientLogin(PatientLoginTemplate):
@@ -44,10 +45,10 @@ class PatientLogin(PatientLoginTemplate):
         AppState.ii=AppState.Pindex
         AppState.qqs=anvil.server.call('getQuestion', AppState.ii)
         AppState.aas=anvil.server.call('getAnswer', AppState.ii)
-        if current_datetime.replace(tzinfo=None) >= row['LastNoti'].replace(tzinfo=None) + datetime.timedelta(seconds=row['Schedule']):
+        if current_datetime.replace(tzinfo=timezone.utc) >= row['LastNoti'].replace(tzinfo=timezone.utc) + datetime.timedelta(seconds=row['Schedule']):
           AppState.b = True
           row['LastNoti'] = current_datetime
-        AppState.yes='Take ' + AppState.currentMed + " every " + app_tables.patient.search()[index]['DisplayNum'] + ' ' + app_tables.patient.search()[index]['DisplayType'] + 's. Next medication is at ' + (app_tables.patient.search()[index]['LastNoti'].replace(tzinfo=None) + datetime.timedelta(seconds=app_tables.patient.search()[index]['Schedule'])).strftime('%Y-%m-%d %H:%M:%S') 
+        AppState.yes='Take ' + AppState.currentMed + " every " + app_tables.patient.search()[index]['DisplayNum'] + ' ' + app_tables.patient.search()[index]['DisplayType'] + 's. Next medication is at ' + (app_tables.patient.search()[index]['LastNoti'].replace(tzinfo=timezone.utc) + datetime.timedelta(seconds=app_tables.patient.search()[index]['Schedule'])).strftime('%Y-%m-%d %H:%M:%S') 
         open_form('PatientUI')
     else:  
       ##self.rich_text_1.visible = True
