@@ -182,10 +182,10 @@ def setLastMediTime(code):
 def checks():
   table_data = app_tables.patient.search()
   for row in table_data:
-    if row['LastMedi'] is not None:
+    #if row['LastMedi'] is not None:
 
 
-      if datetime.datetime.now()>= row['MediTime'].replace(tzinfo=None):
+      #if datetime.datetime.now()>= row['MediTime'].replace(tzinfo=None):
         row['LastMedi'] = row['MediTime']
         row['MediTime'] = row['MediTime'] + datetime.timedelta(seconds=row['Schedule'])
 
