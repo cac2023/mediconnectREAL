@@ -5,6 +5,12 @@ scheduled_tasks:
     every: minute
     at: {}
   job_id: VUPQWWIO
+- task_name: checks
+  time_spec:
+    n: 1
+    every: minute
+    at: {}
+  job_id: BRLOTAGF
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
