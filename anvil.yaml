@@ -1,10 +1,10 @@
 scheduled_tasks:
-- task_name: check()
+- task_name: checks
   time_spec:
     n: 1
     every: minute
     at: {}
-  job_id: OQUGOFOT
+  job_id: RBAUAQWO
 services:
 - source: /runtime/services/tables.yml
   client_config: {}

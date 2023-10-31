@@ -178,7 +178,7 @@ def setLastMediTime(code):
  
   row['LastMedi'] = current_datetime
 
-@anvil.server.callable
+@anvil.server.background_task
 def checks():
   table_data = app_tables.patient.search()
   for row in table_data:
