@@ -186,7 +186,7 @@ def checks():
 
 
       #if datetime.datetime.now()>= row['MediTime'].replace(tzinfo=None):
-        row['LastMedi'] = row['MediTime']
-        row['MediTime'] = row['MediTime'] + datetime.timedelta(seconds=row['Schedule'])
+   row['LastMedi'] = row['MediTime']
+   row['MediTime'] = row['MediTime'] + datetime.timedelta(seconds=row['Schedule'])
 
         
