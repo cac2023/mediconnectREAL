@@ -1,14 +1,17 @@
 scheduled_tasks:
-- task_name: checks
+- task_name: send_emails_to_patients
   time_spec:
     n: 1
     every: minute
     at: {}
-  job_id: OJVYMJYT
+  job_id: DHJYPESS
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+- source: /runtime/services/anvil/email.yml
+  client_config: {}
+  server_config: {custom_smtp: false, test_mode: true}
 startup: {type: form, module: Intro}
 package_name: MediConnect
 allow_embedding: false
@@ -74,11 +77,11 @@ db_schema:
     - name: Schedule
       admin_ui: {order: 8, width: 200}
       type: number
-    - name: MediTime
-      admin_ui: {width: 200, order: 9}
+    - name: LastEmail
+      admin_ui: {width: 200, order: 11}
       type: datetime
-    - name: LastMedi
-      admin_ui: {width: 200, order: 10}
-      type: datetime
+    - name: email
+      admin_ui: {width: 200, order: 12}
+      type: string
     title: Patient
 uplink_visible: true

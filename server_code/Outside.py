@@ -1,3 +1,4 @@
+import anvil.email
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -131,8 +132,8 @@ def getmFromIndex(index) :
    return row['Medications']
 
 @anvil.server.callable
-def add_patient(user, pas, code, name):
-  app_tables.patient.add_row(Username=user, Password=pas, UniqueCode=code, Name=name, Diagnosis='')
+def add_patient(user, pas, code, name, emaild):
+  app_tables.patient.add_row(Username=user, Password=pas, UniqueCode=code, Name=name, Diagnosis='', email=emaild)
 
 @anvil.server.callable
 def checkDAccount(userx, pasx):
@@ -170,23 +171,33 @@ def setMediTime(code):
   row['MediTime'] = current_datetime + time_to_add
 
 @anvil.server.callable
-def setLastMediTime(code):
+def setLastEmail(code):
   index = getPatientIndexFromCode(code)
   table_data = app_tables.patient.search()      
   row = table_data[index]
   current_datetime = datetime.datetime.now()
  
-  row['LastMedi'] = current_datetime
+  row['LastEmail'] = current_datetime
+
 
 @anvil.server.background_task
-def checks():
-  table_data = app_tables.patient.search()
-  for row in table_data:
-    #if row['LastMedi'] is not None:
+def send_emails_to_patients():
+    current_datetime = datetime.datetime.now()
 
+    patientss = app_tables.patients.search()
 
-      #if datetime.datetime.now()>= row['MediTime'].replace(tzinfo=None):
-   row['LastMedi'] = row['MediTime']
-   row['MediTime'] = row['MediTime'] + datetime.timedelta(seconds=row['Schedule'])
+    for patient in patientss:
+      if patient['Schedule'] is not None:
+        schedule_datetime = patient['Schedule']  
+        last_email_sent = patient['LastEmail']  
 
+        if current_datetime >= last_email_sent + datetime.timedelta(seconds=schedule_seconds):
+            send_email_to_patient(patient)
+            
+            # Update the 'last_email_sent' column to the current time
+            patient['LastEmail'] = current_datetime
+            anvil.email.send(from_name="Doctor", to = patient['email'], subject='Take Medication', html='take your medication now', text='take your medsication now')
+        
+        
+          
         

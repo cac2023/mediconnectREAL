@@ -18,7 +18,7 @@ class PatientSignUp(PatientSignUpTemplate):
     AppState.Ppassword=self.password_sign.text
     AppState.PCode = self.text_box_1.text
     AppState.PName=self.namebox.text
-    anvil.server.call('add_patient', AppState.Pusername, AppState.Ppassword, AppState.PCode, AppState.PName)
+    anvil.server.call('add_patient', AppState.Pusername, AppState.Ppassword, AppState.PCode, AppState.PName, self.emal.text)
 
     open_form('PatientLogin')
     pass
