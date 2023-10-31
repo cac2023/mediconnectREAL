@@ -148,6 +148,22 @@ def checkDAccount(userx, pasx):
 def getDiagnosis(userx):
   return app_tables.patient.get(Username=userx)['Diagnosis']
 
+@anvil.server.callable
+def getQuestion(index):
+  return app_tables.patient.search()[index]['Question']
+
+@anvil.server.callable
+def setQuestion(index, q):
+   app_tables.patient.search()[index]['Question'] = q
+
+@anvil.server.callable
+def getAnswer(index):
+  return app_tables.patient.search()[index]['Answer']
+
+@anvil.server.callable
+def setAnswer(index, q):
+   app_tables.patient.search()[index]['Answer'] = q
+
 
 @anvil.server.callable
 def checkPAccount(userx, pasx):

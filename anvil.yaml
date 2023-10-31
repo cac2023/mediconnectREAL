@@ -83,5 +83,11 @@ db_schema:
     - name: Noti
       admin_ui: {width: 200, order: 12}
       type: bool
+    - name: Question
+      admin_ui: {width: 200, order: 13}
+      type: string
+    - name: Answer
+      admin_ui: {width: 200, order: 14}
+      type: string
     title: Patient
 uplink_visible: true
