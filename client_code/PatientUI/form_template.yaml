@@ -38,10 +38,4 @@ components:
     properties: {text: Schedule, font: poppins, font_size: 25, bold: true, align: center}
     type: Label
     layout_properties: {grid_position: 'QFXUMP,KUIKQN'}
-  - name: label_4
-    properties: {font: poppins, font_size: 17, align: center}
-    type: Label
-    layout_properties: {grid_position: 'IQMZYT,ZHGCQR'}
-    data_bindings:
-    - {property: text, code: blank, writeback: false}
 is_package: true

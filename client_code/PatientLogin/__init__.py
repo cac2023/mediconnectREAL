@@ -5,8 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..Variables import AppState
-
-
+import datetime
 
 
 class PatientLogin(PatientLoginTemplate):
@@ -38,7 +37,14 @@ class PatientLogin(PatientLoginTemplate):
       else :
         AppState.currentDiag = anvil.server.call('getdiFromIndex', AppState.Pindex)
         AppState.currentMed = anvil.server.call('getmFromIndex', AppState.Pindex)
-        
+        index = AppState.Pindex
+        table_data = app_tables.patient.search()      
+        row = table_data[index]
+        current_datetime = datetime.datetime.now()
+ 
+        if current_datetime.replace(tzinfo=None) >= row['LastNoti'].replace(tzinfo=None) + datetime.timedelta(seconds=row['Schedule']):
+          AppState.b = True
+          row['LastNoti'] = current_datetime
         open_form('PatientUI')
     else:  
       ##self.rich_text_1.visible = True

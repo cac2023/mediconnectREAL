@@ -132,8 +132,8 @@ def getmFromIndex(index) :
    return row['Medications']
 
 @anvil.server.callable
-def add_patient(user, pas, code, name, emaild):
-  app_tables.patient.add_row(Username=user, Password=pas, UniqueCode=code, Name=name, Diagnosis='', email=emaild)
+def add_patient(user, pas, code, name):
+  app_tables.patient.add_row(Username=user, Password=pas, UniqueCode=code, Name=name, Diagnosis='')
 
 @anvil.server.callable
 def checkDAccount(userx, pasx):
@@ -177,27 +177,18 @@ def setLastEmail(code):
   row = table_data[index]
   current_datetime = datetime.datetime.now()
  
-  row['LastEmail'] = current_datetime
+  row['LastNoti'] = current_datetime
 
+@anvil.server.callable
+def getPatientIndexFromName(code) :
+  index = None
 
-@anvil.server.background_task
-def send_emails_to_patients():
-    current_datetime = datetime.datetime.now()
+  table_data = list(app_tables.patient.search())
 
-    patientss = app_tables.patients.search()
+  condition = lambda row: row['Name'] == code
 
-    for patient in patientss:
-      if patient['Schedule'] is not None:
-        schedule_datetime = patient['Schedule']  
-        last_email_sent = patient['LastEmail']  
-
-        if current_datetime >= last_email_sent + datetime.timedelta(seconds=schedule_seconds):
-            send_email_to_patient(patient)
-            
-            # Update the 'last_email_sent' column to the current time
-            patient['LastEmail'] = current_datetime
-            anvil.email.send(from_name="Doctor", to = patient['email'], subject='Take Medication', html='take your medication now', text='take your medsication now')
-        
-        
-          
-        
+  
+  for i, row in enumerate(table_data):
+      if condition(row):
+        return i
+  return -1

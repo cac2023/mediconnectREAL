@@ -53,7 +53,7 @@ db_schema:
       type: simpleObject
     title: Doctor
   patient:
-    client: search
+    client: full
     server: full
     columns:
     - name: Username
@@ -77,11 +77,11 @@ db_schema:
     - name: Schedule
       admin_ui: {order: 8, width: 200}
       type: number
-    - name: LastEmail
-      admin_ui: {width: 200, order: 11}
+    - name: LastNoti
+      admin_ui: {order: 11, width: 200}
       type: datetime
-    - name: email
+    - name: Noti
       admin_ui: {width: 200, order: 12}
-      type: string
+      type: bool
     title: Patient
 uplink_visible: true

@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..Variables import AppState
-
+import datetime
 
 class PatientUI(PatientUITemplate):
   names = AppState.PatientName
@@ -13,8 +13,12 @@ class PatientUI(PatientUITemplate):
   dif = AppState.currentDiag
   #diagnosis = anvil.server.call('getDiagnosis', AppState.Pusername)
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
+   
     self.init_components(**properties)
-
+    
     # Any code you write here will run before the form opens.
+    print(AppState.b)
+    if True:
+      n = Notification("Take " + self.medd)
+      n.show()    
 
