@@ -5,7 +5,6 @@ import anvil.server
 import datetime
 import time
 import anvil.server
-import threading
 
 @anvil.server.callable
 def add_doctor(user, pas, name):

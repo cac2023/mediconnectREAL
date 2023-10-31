@@ -1,3 +1,10 @@
+scheduled_tasks:
+- task_name: check()
+  time_spec:
+    n: 1
+    every: minute
+    at: {}
+  job_id: OQUGOFOT
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
