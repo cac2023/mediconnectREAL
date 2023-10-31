@@ -41,10 +41,13 @@ class PatientLogin(PatientLoginTemplate):
         table_data = app_tables.patient.search()      
         row = table_data[index]
         current_datetime = datetime.datetime.now()
- 
+        AppState.ii=AppState.Pindex
+        AppState.qqs=anvil.server.call('getQuestion', AppState.ii)
+        AppState.aas=anvil.server.call('getAnswer', AppState.ii)
         if current_datetime.replace(tzinfo=None) >= row['LastNoti'].replace(tzinfo=None) + datetime.timedelta(seconds=row['Schedule']):
           AppState.b = True
           row['LastNoti'] = current_datetime
+        AppState.yes='Take ' + AppState.currentMed + " every " + app_tables.patient.search()[index]['DisplayNum'] + ' ' + app_tables.patient.search()[index]['DisplayType'] + 's. Next medication is at ' + (app_tables.patient.search()[index]['LastNoti'].replace(tzinfo=None) + datetime.timedelta(seconds=app_tables.patient.search()[index]['Schedule'])).strftime('%Y-%m-%d %H:%M:%S') 
         open_form('PatientUI')
     else:  
       ##self.rich_text_1.visible = True

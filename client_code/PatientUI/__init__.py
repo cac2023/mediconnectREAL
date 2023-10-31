@@ -13,25 +13,29 @@ class PatientUI(PatientUITemplate):
   names = AppState.PatientName
   medd = AppState.currentMed
   dif = AppState.currentDiag
-  index = anvil.server.call('getPatientIndexFromName', names)
+  index = AppState.ii
+  textt = AppState.yes
+  y = AppState.aas
+  x=AppState.qqs
+  if x is not None:
+    question=x
+  if y is not None:
+    Answer=y      
   #diagnosis = anvil.server.call('getDiagnosis', AppState.Pusername)
   def __init__(self, **properties):
     self.init_components(**properties)
-    x = anvil.server.call('getQuestion', self.index)
-    if x is not None:
-      self.question=x
-    y = anvil.server.call('getAnswer', self.index)
-    if y is not None:
-      self.Answer=x      
+
     # Any code you write here will run before the form opens.
-    print(AppState.b)
-    if True:
+    if AppState.b:
       n = Notification("Take " + self.medd)
       n.show()    
 
   def button_2_click(self, **event_args):
-    anvil.server.call('setQuestion', index, self.text_box_1.text )
-    anvil.server.call('setAnswer', index, None )
-    open_form('PatientUI')
+    anvil.server.call('setQuestion', self.index, self.text_box_1.text )
+    anvil.server.call('setAnswer', self.index, None )
+    AppState.qqs=anvil.server.call('getQuestion', self.index)
+    AppState.aas=anvil.server.call('getAnswer', self.index)
+    self.text_box_1.text = anvil.server.call('getQuestion', self.index)
+    self.label_6.text= 'No Answer Yet!'
     pass
 

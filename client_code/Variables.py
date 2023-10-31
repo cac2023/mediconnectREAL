@@ -4,6 +4,9 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class AppState:
+    ii=''
+    aas=''
+    qqs=''
     b = False
     currentDiag = ''
     currentMed = ''
@@ -25,3 +28,6 @@ class AppState:
     Ppassword = 'odsfijofdijoijsdof'
     Ptypedu = 'fosdunfoids'
     Ptypedp = 'dfocnsodinf'
+    qq=''
+    aa=''
+    yes=''

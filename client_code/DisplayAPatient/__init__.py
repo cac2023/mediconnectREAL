@@ -19,6 +19,9 @@ class DisplayAPatient(DisplayAPatientTemplate):
     f = self.text_box_1.text
     if anvil.server.call('checkDoctorCodes', AppState.Dindex, f ) :
       AppState.currentCode=f
+      AppState.aa=anvil.server.call('getAnswer', anvil.server.call('getPatientIndexFromCode', AppState.currentCode))
+
+      AppState.qq=anvil.server.call('getQuestion', anvil.server.call('getPatientIndexFromCode', AppState.currentCode))
       AppState.currentName = anvil.server.call('getThePatientsName', AppState.currentCode)
       open_form('EditPatient')
     pass
