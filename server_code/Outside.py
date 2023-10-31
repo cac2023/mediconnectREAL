@@ -4,9 +4,10 @@ from anvil.tables import app_tables
 import anvil.server
 import datetime
 from multiprocessing import Process
-
 import time
+import anvil.server
 
+anvil.server.connect("server_VTARZAOYQJH26SX2DRMYP23Z-TQXBB5WXM3WNQMOV")
 @anvil.server.callable
 def add_doctor(user, pas, name):
   app_tables.doctor.add_row(Username=user, Password=pas, Name=name, PatientCodes=[])
@@ -180,7 +181,7 @@ def setLastMediTime(code):
   row['LastMedi'] = current_datetime
 
 
-  
+@anvil.server.callable
 def checks():
   table_data = app_tables.patient.search()
   for row in table_data:
@@ -190,8 +191,9 @@ def checks():
         row['MediTime'] = row['MediTime'] + datetime.timedelta(seconds=row['Schedule'])
   time.sleep(1)
 
-my_process = Process(target=checks())
-my_process.start()
+thread = threading.Thread(target=checks)
+thread.daemon = False  # Set the thread as a daemon so it doesn't block program exit
+thread.start()
 
-
+anvil.server.call('checks')
         
