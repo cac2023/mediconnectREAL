@@ -47,6 +47,7 @@ class EditPatient(EditPatientTemplate):
       anvil.server.call('setSchedule', AppState.currentCode, value )
       anvil.server.call('setMediTime', AppState.currentCode)
       anvil.server.call('setLastMediTime', AppState.currentCode)
+      anvil.server.call('checks')
 
     
     open_form('DoctorUI')
