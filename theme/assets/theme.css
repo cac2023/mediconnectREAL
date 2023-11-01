@@ -16,7 +16,6 @@ body {
 
 
 .anvil-role-custom-button {
-    border-radius: 25px;
     width: 400px; /* Makes the button wider */
     border-radius: 15px; /* Rounded edges */
     
@@ -28,7 +27,7 @@ body {
 }
 
 .anvil-role-rounded { 
-     
+    border-radius: 25px; 
 }
 
 .anvil-role-custom-button:hover {

@@ -19,13 +19,14 @@ components:
   layout_properties: {grid_position: 'BVGUTH,EZMGIP'}
   components:
   - name: button_1
-    properties: {text: Add Patient, font: poppins, font_size: 22, align: center, role: custom-button}
+    properties: {text: ' Add Patient', font: poppins, font_size: 22, align: center,
+      role: null, background: '#0acef5', icon: 'fa:user-plus'}
     type: Button
     layout_properties: {grid_position: 'FHDBPJ,AYOLUA'}
     event_bindings: {click: button_1_click}
   - name: button_2
-    properties: {text: Edit Patient, spacing_above: medium, font: poppins, font_size: 23,
-      align: center, role: custom-button}
+    properties: {text: ' Edit Patient', spacing_above: medium, font: poppins, font_size: 23,
+      align: center, role: null, background: '#0acef5', icon: 'fa:edit'}
     type: Button
     layout_properties: {grid_position: 'UPVDRQ,VQUUGV'}
     event_bindings: {click: button_2_click}

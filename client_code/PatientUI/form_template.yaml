@@ -57,8 +57,8 @@ components:
     data_bindings:
     - {property: placeholder, code: self.question, writeback: false}
   - name: button_2
-    properties: {text: Enter Question, align: center, spacing_above: medium, spacing_below: medium,
-      role: custom-button}
+    properties: {text: 'Enter Question ', align: center, spacing_above: medium, spacing_below: medium,
+      role: null, background: '#0acef5', icon: 'fa:question-circle', icon_align: right}
     type: Button
     layout_properties: {grid_position: 'WHDNHZ,PEFJGB'}
     event_bindings: {click: button_2_click}

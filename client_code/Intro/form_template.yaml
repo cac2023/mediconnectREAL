@@ -14,16 +14,16 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'HEXNTH,DSOXET'}
 - name: button_doctor
-  properties: {role: null, align: center, border: '', enabled: true, foreground: '',
-    visible: true, text: Doctor, font_size: 57, font: poppins, spacing_above: medium,
-    spacing_below: medium, background: '#13b4d4', bold: false}
+  properties: {role: null, align: center, border: '', enabled: true, foreground: '#ffffff',
+    visible: true, text: ' Doctor', font_size: 57, font: poppins, spacing_above: medium,
+    spacing_below: medium, background: '#0acef5', bold: false, icon: 'fa:user-circle-o'}
   type: Button
   layout_properties: {grid_position: 'IGVIPU,NASECX', full_width_row: false, row_background: ''}
   event_bindings: {click: button_doctor_click}
   data_bindings: []
 - name: button_patient
-  properties: {text: Patient, font_size: 57, font: poppins, role: null, background: '#13b4d4',
-    foreground: '', spacing_above: medium}
+  properties: {text: ' Patient', font_size: 57, font: poppins, role: null, background: '#0acef5',
+    foreground: '#ffffff', spacing_above: medium, icon: 'fa:user-circle-o'}
   type: Button
   layout_properties: {grid_position: 'BOYDWG,QPASSF', row_background: ''}
   event_bindings: {click: button_patient_click}
