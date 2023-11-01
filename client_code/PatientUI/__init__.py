@@ -30,7 +30,7 @@ class PatientUI(PatientUITemplate):
       #alert("Take the medication: " + self.medd, dismissable=True, timeout=None)
       #n = Notification("Take " + self.medd)
       #n.show()    
-      Notification("Take the medication: " + self.medd, style="default", timeout=None).show()
+      Notification("Take the medication: " + self.medd, style="my-custom-notification", timeout=None).show()
 
 
   def button_2_click(self, **event_args):
