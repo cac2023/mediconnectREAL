@@ -3,7 +3,7 @@ container:
   properties: {background: 'theme:blueeeee'}
 components:
 - name: button_2
-  properties: {text: Back, align: left, bold: true, font: poppins}
+  properties: {text: Back, align: left, bold: true, font: poppins, icon: 'fa:arrow-left'}
   type: Button
   layout_properties: {grid_position: 'NEOOYG,SHVLGQ'}
   event_bindings: {click: button_2_click}
@@ -80,7 +80,7 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'QIEBSU,KUBUHQ'}
 - name: button_1
-  properties: {text: Enter, font: poppins, spacing_above: large}
+  properties: {text: Enter, font: poppins, spacing_above: large, role: custom-button}
   type: Button
   layout_properties: {grid_position: 'YDLNBD,GVUKTA'}
   event_bindings: {click: button_1_click}

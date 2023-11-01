@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: button_1
-    properties: {text: Back, align: left, bold: true, font: poppins}
+    properties: {text: Back, align: left, bold: true, font: poppins, icon: 'fa:arrow-left'}
     type: Button
     layout_properties: {grid_position: 'MYQTQJ,MSKZOW'}
     event_bindings: {click: button_1_click}
@@ -26,7 +26,8 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'QHQCHF,RFKWGV'}
   - name: Entercode
-    properties: {text: Enter, font: poppins, font_size: 15, spacing_above: medium}
+    properties: {text: Enter, font: poppins, font_size: 15, spacing_above: medium,
+      role: custom-button}
     type: Button
     layout_properties: {grid_position: 'BCKCRN,AEXXWD'}
     event_bindings: {click: Entercode_click}

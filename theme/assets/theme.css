@@ -26,8 +26,12 @@ body {
     margin: 0 auto; /* Center align button */
 }
 
+.anvil-role-rounded { 
+    border-radius: 25px; 
+}
+
 .anvil-role-custom-button:hover {
-    background-color: #39339c; 
+    background-color: #13b4d4; 
     color: white; /* White text on hover */
 }
 
