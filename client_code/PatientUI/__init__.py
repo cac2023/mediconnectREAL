@@ -27,8 +27,9 @@ class PatientUI(PatientUITemplate):
 
     # Any code you write here will run before the form opens.
     if AppState.b:
-      n = Notification("Take " + self.medd)
-      n.show()    
+      alert("Take the medication: " + self.medd, dismissable=True, timeout=None)
+      #n = Notification("Take " + self.medd)
+      #n.show()    
 
   def button_2_click(self, **event_args):
     anvil.server.call('setQuestion', self.index, self.text_box_1.text )

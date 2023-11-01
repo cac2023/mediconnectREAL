@@ -9,13 +9,13 @@ from ..Variables import AppState
 class EditPatient(EditPatientTemplate):
 
   named = AppState.currentName
-  second = 'Per Second'
-  minute = 'Per Minute'
-  hour = 'Per Hour'
-  day = 'Per Day'
-  week = 'Per Week'
-  month = 'Per Month'
-  year = 'Per Year'
+  second = 'Second'
+  minute = 'Minute'
+  hour = 'Hour'
+  day = 'Day'
+  week = 'Week'
+  month = 'Month'
+  year = 'Year'
   qd = AppState.qq
   question = 'No Question Yet'
   if qd is not None:
