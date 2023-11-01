@@ -38,6 +38,7 @@ components:
     properties: {text: Schedule, font: poppins, font_size: 25, bold: true, align: center}
     type: Label
     layout_properties: {grid_position: 'QFXUMP,KUIKQN'}
+    data_bindings: []
   - name: label_7
     properties: {align: center, bold: true}
     type: Label
@@ -45,7 +46,8 @@ components:
     data_bindings:
     - {property: text, code: self.textt, writeback: false}
   - name: label_4
-    properties: {align: center, bold: true, text: Ask the doctor a question}
+    properties: {align: center, bold: true, text: Ask the doctor a question, font: poppins,
+      font_size: 25}
     type: Label
     layout_properties: {grid_position: 'PVFWXZ,FNQLGG'}
   - name: text_box_1
@@ -55,16 +57,16 @@ components:
     data_bindings:
     - {property: placeholder, code: self.question, writeback: false}
   - name: button_2
-    properties: {text: Enter Question, align: center}
+    properties: {text: Enter Question, align: center, spacing_above: medium, spacing_below: medium}
     type: Button
     layout_properties: {grid_position: 'WHDNHZ,PEFJGB'}
     event_bindings: {click: button_2_click}
   - name: label_5
-    properties: {align: center, bold: true, text: Doctor Answer}
+    properties: {align: center, bold: true, text: Doctor Answer, font: poppins, font_size: 25}
     type: Label
     layout_properties: {grid_position: 'EFZFRN,QNWSNA'}
   - name: label_6
-    properties: {text: ''}
+    properties: {text: '', font: poppins, font_size: 18, bold: true, align: center}
     type: Label
     layout_properties: {grid_position: 'FMMYBH,PTHWXG'}
     data_bindings:

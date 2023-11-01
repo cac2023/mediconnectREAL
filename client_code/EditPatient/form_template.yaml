@@ -20,7 +20,7 @@ components:
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
-  layout_properties: {grid_position: 'KNBGCZ,ISBGWM'}
+  layout_properties: {grid_position: 'CQGOYN,TWIZYM'}
   components:
   - name: label_2
     properties: {align: center, bold: true, text: Edit Medications, font: poppins,
@@ -32,8 +32,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'XPSUXY,UJZJEJ'}
   - name: label_3
-    properties: {align: center, bold: true, text: 'Edit Schedule: Type in number,
-        then pick seconds, minutes, hours, etc.', font: poppins, font_size: 20}
+    properties: {align: center, bold: true, text: Edit Schedule, font: poppins, font_size: 20}
     type: Label
     layout_properties: {grid_position: ''}
   - name: timings
@@ -43,7 +42,7 @@ components:
   - name: drop_down_1
     properties: {include_placeholder: true}
     type: DropDown
-    layout_properties: {grid_position: 'ARZEZC,KBIJTK'}
+    layout_properties: {grid_position: 'QDYUWQ,ZPUBHA'}
     data_bindings:
     - {property: items, code: 'self.second, self.minute, self.hour, self.day, self.week,
         self.month, self.year', writeback: false}
@@ -57,18 +56,23 @@ components:
     properties: {font: poppins, align: center}
     type: TextBox
     layout_properties: {grid_position: 'AZEYDM,DNFEZP'}
+- name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'OBJXBT,QVKWUI', row_background: '#ffffff'}
 - name: label_4
-  properties: {align: center, bold: true, text: Patient Question}
+  properties: {align: center, bold: true, text: Patient Question, font: poppins, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'PROXHU,UMUGQO'}
 - name: label_5
-  properties: {align: center, bold: true}
+  properties: {align: center, bold: true, font: poppins, font_size: 16.5}
   type: Label
   layout_properties: {grid_position: 'PTQPCM,LXPUUQ'}
   data_bindings:
   - {property: text, code: self.question, writeback: false}
 - name: label_6
-  properties: {align: center, bold: true, text: Answer the question!}
+  properties: {align: center, bold: true, text: Answer the question!, font: poppins,
+    font_size: 20}
   type: Label
   layout_properties: {grid_position: 'LIVVOK,CDUQVQ'}
 - name: answerd
