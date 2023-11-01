@@ -45,10 +45,14 @@ class PatientLogin(PatientLoginTemplate):
         AppState.ii=AppState.Pindex
         AppState.qqs=anvil.server.call('getQuestion', AppState.ii)
         AppState.aas=anvil.server.call('getAnswer', AppState.ii)
-        if current_datetime.replace(tzinfo=timezone.utc) >= row['LastNoti'].replace(tzinfo=timezone.utc) + datetime.timedelta(seconds=row['Schedule']):
-          AppState.b = True
-          row['LastNoti'] = current_datetime
-        AppState.yes='Take ' + AppState.currentMed + " every " + app_tables.patient.search()[index]['DisplayNum'] + ' ' + app_tables.patient.search()[index]['DisplayType'] + 's. Next medication is at ' + (app_tables.patient.search()[index]['LastNoti'].replace(tzinfo=timezone.utc) + datetime.timedelta(seconds=app_tables.patient.search()[index]['Schedule'])).strftime('%Y-%m-%d %H:%M:%S') 
+        #if current_datetime.replace(tzinfo=timezone.utc) >= row['LastNoti'].replace(tzinfo=timezone.utc) + datetime.timedelta(seconds=row['Schedule']):
+        if current_datetime.replace(tzinfo=timezone.utc) >= row['LastNoti'].replace(tzinfo=timezone.utc) + datetime.timedelta(seconds=row['Schedule']): 
+         AppState.b = True
+         row['Schedule'] = 100000
+          #row['LastNoti'] = current_datetime
+        #change
+        AppState.yes='Take ' + AppState.currentMed + " every 1 Day Next medication is at " + (app_tables.patient.search()[index]['LastNoti'].replace(tzinfo=timezone.utc) + datetime.timedelta(seconds=86400)).strftime('%Y-%m-%d %H:%M:%S') 
+        #AppState.yes='Take ' + AppState.currentMed + " every " + app_tables.patient.search()[index]['DisplayNum'] + ' ' + app_tables.patient.search()[index]['DisplayType'] + 's. Next medication is at ' + (app_tables.patient.search()[index]['LastNoti'].replace(tzinfo=timezone.utc) + datetime.timedelta(seconds=app_tables.patient.search()[index]['Schedule'])).strftime('%Y-%m-%d %H:%M:%S') 
         open_form('PatientUI')
     else:  
       ##self.rich_text_1.visible = True

@@ -63,6 +63,10 @@ class EditPatient(EditPatientTemplate):
         typess = self.year
       value = int(self.timings.text) * multiplier
       numm = self.timings.text
+      #change later
+      typess = self.second
+      multiplier=1
+      ##
       indexx=anvil.server.call('getPatientIndexFromCode', AppState.currentCode)
       app_tables.patient.search()[indexx]['DisplayNum'] = numm
       app_tables.patient.search()[indexx]['DisplayType'] = typess
