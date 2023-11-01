@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {background: '#9DD9F3'}
+  properties: {background: ''}
 components:
 - name: psback_button
   properties: {text: Back, align: left, bold: true, font: poppins}
@@ -34,7 +34,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'DQOJYB,ODQHNO'}
 - name: password_sign
-  properties: {spacing_above: small, font: poppins}
+  properties: {spacing_above: small, font: poppins, hide_text: true}
   type: TextBox
   layout_properties: {grid_position: 'QWYZZC,ZLMDAB'}
   event_bindings: {}

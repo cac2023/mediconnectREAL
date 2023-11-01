@@ -1,7 +1,7 @@
 
 body {
-    background: linear-gradient(to right, #83EAF1, #63A4FF); /* This creates a gradient from pink to orange */
-    color: white; /* This makes the text color white for better visibility on the dark background */
+    background: linear-gradient(to right, #83EAF1, #63A4FF); /* blue gradient */
+    color: white; 
 }
 
 #mediConnectHeader {
@@ -13,23 +13,23 @@ body {
 }
 
 
+
+
 .anvil-role-custom-button {
-    background-color: #3f3f45; /* Black color */
-    border: white;
-    border-radius: 55px;
-    color: white;
-    padding: 50px 60px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    margin: 20; /* Remove margin to make the button fill the container */
-    cursor: pointer;
-    transition: background-color 0.3s;
+    width: 400px; /* Makes the button wider */
+    border-radius: 15px; /* Rounded edges */
     
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Comic Sans Font */
+    font-size: 16px; /* Font size */
+    background-color: #f2f2f2; /* Background color */
+    text-align: center; /* Center align text */
+    margin: 0 auto; /* Center align button */
 }
 
 .anvil-role-custom-button:hover {
-    background-color: #29292d; /* Slightly darker color on hover */
+    background-color: #39339c; 
+    color: white; /* White text on hover */
 }
+
 
 

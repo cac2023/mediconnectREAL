@@ -1,5 +1,5 @@
 roles:
-- {name: custom-button}
 - {name: mediConnectHeader}
+- {name: custom-button}
 color_scheme:
   colors: []

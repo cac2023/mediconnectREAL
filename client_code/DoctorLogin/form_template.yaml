@@ -25,7 +25,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'UIWIRZ,LYCROR'}
 - name: doctor_login_password
-  properties: {text: '', font: poppins}
+  properties: {text: '', font: poppins, hide_text: true}
   type: TextBox
   layout_properties: {grid_position: 'XYTRHC,HJMQMB'}
   event_bindings: {}

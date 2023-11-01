@@ -8,7 +8,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'LBZKFE,BMWAGQ'}
   data_bindings:
-  - {property: text, code: '''Hello Doctor '' + self.Namess', writeback: false}
+  - {property: text, code: '''Hello Dr. '' + self.Namess', writeback: false}
 - name: spacer_2
   properties: {height: 32}
   type: Spacer
@@ -19,7 +19,7 @@ components:
   layout_properties: {grid_position: 'BVGUTH,EZMGIP'}
   components:
   - name: button_1
-    properties: {text: Add Patient, font: poppins, font_size: 22, align: center}
+    properties: {text: Add Patient, font: poppins, font_size: 22, align: center, role: null}
     type: Button
     layout_properties: {grid_position: 'FHDBPJ,AYOLUA'}
     event_bindings: {click: button_1_click}
