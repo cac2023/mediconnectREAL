@@ -45,10 +45,18 @@ components:
     layout_properties: {grid_position: 'YAPRPL,COJECV'}
     data_bindings:
     - {property: text, code: self.textt, writeback: false}
+  - name: spacer_3
+    properties: {height: 7}
+    type: Spacer
+    layout_properties: {grid_position: 'XFZSBX,HZGLKW'}
   - name: spacer_1
-    properties: {height: '20', spacing_above: none, spacing_below: none}
+    properties: {height: 19, spacing_above: none, spacing_below: none}
     type: Spacer
     layout_properties: {grid_position: 'CWMIGP,NDRVEX', full_width_row: true, row_background: '#000000'}
+  - name: spacer_2
+    properties: {height: 10}
+    type: Spacer
+    layout_properties: {grid_position: 'HCNXIZ,TTJJTN'}
   - name: label_8
     properties: {text: Chat, align: center, bold: true, font: poppins, font_size: 40}
     type: Label
@@ -65,8 +73,9 @@ components:
     data_bindings:
     - {property: placeholder, code: self.question, writeback: false}
   - name: button_2
-    properties: {text: 'Enter Question ', align: center, spacing_above: medium, spacing_below: medium,
-      role: null, background: '#0acef5', icon: 'fa:question-circle', icon_align: right}
+    properties: {role: null, align: center, foreground: '#ffffff', text: 'Enter Question ',
+      font_size: 17, font: poppins, spacing_above: medium, icon_align: right, spacing_below: medium,
+      background: '#61399d', icon: 'fa:question-circle'}
     type: Button
     layout_properties: {grid_position: 'WHDNHZ,PEFJGB'}
     event_bindings: {click: button_2_click}

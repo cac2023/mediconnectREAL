@@ -3,8 +3,8 @@ container:
   properties: {background: 'theme:blueeeee'}
 components:
 - name: plback_button
-  properties: {text: Back, align: left, font: poppins, bold: true, icon: 'fa:arrow-left',
-    background: '#0acef5'}
+  properties: {text: ' Back', align: left, font: poppins, bold: false, icon: 'fa:arrow-left',
+    background: '#61399d', foreground: 'theme:FONT'}
   type: Button
   layout_properties: {grid_position: 'WCKPDU,IASGOD'}
   event_bindings: {click: plback_button_click}
@@ -41,14 +41,15 @@ components:
   layout_properties: {grid_position: 'GLPOXC,JCEKPX'}
   event_bindings: {}
 - name: password_login
-  properties: {text: 'Login ', spacing_above: medium, font: poppins, background: '#0acef5',
-    icon: 'fa:arrow-right', icon_align: right}
+  properties: {text: 'Login ', spacing_above: medium, font: poppins, background: '#61399d',
+    icon: 'fa:arrow-right', icon_align: right, foreground: '#ffffff'}
   type: Button
   layout_properties: {grid_position: 'UGWXUV,RJPWIF'}
   event_bindings: {click: doctor_login_click}
 - name: password_signup
-  properties: {text: 'Don''t have an account? Create One ', spacing_above: small,
-    font: poppins, background: '#0acef5', icon: 'fa:user-plus', icon_align: right}
+  properties: {text: 'Don''t have an account? Create One  ', spacing_above: small,
+    font: poppins, background: '#61399d', icon: 'fa:user-plus', icon_align: right,
+    foreground: '#ffffff'}
   type: Button
   layout_properties: {grid_position: 'RHLVAV,CUDUXJ'}
   event_bindings: {click: doctor_signup_click}

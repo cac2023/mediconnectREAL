@@ -3,8 +3,8 @@ container:
   properties: {background: 'theme:blueeeee'}
 components:
 - name: button_2
-  properties: {text: Back, align: left, bold: true, font: poppins, icon: 'fa:arrow-left',
-    background: '#0acef5'}
+  properties: {text: ' Back', align: left, bold: false, font: poppins, icon: 'fa:arrow-left',
+    background: '#61399d', foreground: 'theme:FONT'}
   type: Button
   layout_properties: {grid_position: 'NEOOYG,SHVLGQ'}
   event_bindings: {click: button_2_click}
@@ -77,8 +77,8 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'QIEBSU,KUBUHQ'}
 - name: button_1
-  properties: {text: 'Enter ', font: poppins, spacing_above: large, role: null, background: '#0acef5',
-    icon: 'fa:arrow-right', icon_align: right}
+  properties: {text: 'Enter ', font: poppins, spacing_above: large, role: null, background: '#61399d',
+    icon: 'fa:arrow-right', icon_align: right, foreground: 'theme:FONT'}
   type: Button
   layout_properties: {grid_position: 'YDLNBD,GVUKTA'}
   event_bindings: {click: button_1_click}
