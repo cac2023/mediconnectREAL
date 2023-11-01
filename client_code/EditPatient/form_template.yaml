@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {background: 'theme:blueeeee'}
+  properties: {background: 'theme:blueeeee', spacing_above: none, spacing_below: none}
 components:
 - name: button_2
   properties: {text: ' Back', align: left, bold: false, font: poppins, icon: 'fa:arrow-left',
@@ -57,8 +57,20 @@ components:
     properties: {font: poppins, align: center}
     type: TextBox
     layout_properties: {grid_position: 'AZEYDM,DNFEZP'}
+  - name: spacer_1_copy_1_copy_1
+    properties: {height: 19, spacing_above: small, spacing_below: none}
+    type: Spacer
+    layout_properties: {grid_position: 'SYDZJJ,LKFVZL'}
+- name: spacer_1_copy_1
+  properties: {height: 19, spacing_above: small, spacing_below: none}
+  type: Spacer
+  layout_properties: {grid_position: 'WOBUCJ,DCBUZB', row_background: '#000'}
+- name: label_8_copy_1
+  properties: {text: Chat, align: center, bold: true, font: poppins, font_size: 40}
+  type: Label
+  layout_properties: {grid_position: 'DYPLVV,CQQXOC'}
 - name: label_4
-  properties: {align: center, bold: true, text: Patient Question, font: poppins, font_size: 20}
+  properties: {align: center, bold: true, text: Patient Question, font: poppins, font_size: 23}
   type: Label
   layout_properties: {grid_position: 'PROXHU,UMUGQO'}
 - name: label_5
@@ -69,7 +81,7 @@ components:
   - {property: text, code: self.question, writeback: false}
 - name: label_6
   properties: {align: center, bold: true, text: Answer the question!, font: poppins,
-    font_size: 20}
+    font_size: 23}
   type: Label
   layout_properties: {grid_position: 'LIVVOK,CDUQVQ'}
 - name: answerd
