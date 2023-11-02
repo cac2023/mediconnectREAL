@@ -49,7 +49,7 @@ class PatientLogin(PatientLoginTemplate):
          AppState.b = True
          row['LastNoti'] = current_datetime
         
-         AppState.yes='Take ' + AppState.currentMed + " every " + app_tables.patient.search()[index]['DisplayNum'] + ' ' + app_tables.patient.search()[index]['DisplayType'] + 's. Next medication is at ' + (app_tables.patient.search()[index]['LastNoti'].replace(tzinfo=timezone.utc) + datetime.timedelta(seconds=app_tables.patient.search()[index]['Schedule'])).strftime('%Y-%m-%d %H:%M:%S') 
+        AppState.yes='Take ' + AppState.currentMed + " every " + app_tables.patient.search()[index]['DisplayNum'] + ' ' + app_tables.patient.search()[index]['DisplayType'] + 's. Next medication is at ' + (app_tables.patient.search()[index]['LastNoti'].replace(tzinfo=timezone.utc) + datetime.timedelta(seconds=app_tables.patient.search()[index]['Schedule'])).strftime('%Y-%m-%d %H:%M:%S') 
         open_form('PatientUI')
     else:  
       ##self.rich_text_1.visible = True
